@@ -61,3 +61,22 @@ function showBalance(balance: string | number) {
 }
 showBalance("100");
 showBalance(300);
+
+//  Avançando em Union Type:
+function showUserRole(role: boolean | string) {
+  if (typeof role === "boolean") {
+    return "Usuário aprovado!";
+  }
+  return `A opção do usuário é ${role}.`;
+}
+
+console.log(showUserRole(true));
+console.log(showUserRole("Shalom!"));
+
+//  Type Alias:
+type ID = string | number;
+function showId(id: ID) {
+  console.log(`O Id é ${id}`);
+}
+showId(26);
+showId("300");

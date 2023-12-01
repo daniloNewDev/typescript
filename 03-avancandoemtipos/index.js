@@ -55,3 +55,17 @@ function showBalance(balance) {
 }
 showBalance("100");
 showBalance(300);
+//  Avançando em Union Type:
+function showUserRole(role) {
+    if (typeof role === "boolean") {
+        return "Usuário aprovado!";
+    }
+    return `A opção do usuário é ${role}.`;
+}
+console.log(showUserRole(true));
+console.log(showUserRole("Shalom!"));
+function showId(id) {
+    console.log(`O Id é ${id}`);
+}
+showId(26);
+showId("300");
