@@ -1,1 +1,0 @@
-let som = (a, b) => a + b
