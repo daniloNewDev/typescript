@@ -16,3 +16,7 @@ fullName;
 let a: boolean = false;
 console.log(a);
 console.log(typeof a);
+
+//  Annotation:
+const ann: string = "Teste";
+let inf = "Teste";

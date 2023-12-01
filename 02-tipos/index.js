@@ -1,16 +1,20 @@
+"use strict";
 //  Numbers:
-var x = 10;
+let x = 10;
 x;
 console.log(typeof x);
 //  String:
-var firstName = "Danilo";
+const firstName = "Danilo";
 console.log(firstName.toUpperCase());
 console.log(firstName.toLowerCase());
-var lastName = "Leite";
-var fullName;
+const lastName = "Leite";
+let fullName;
 fullName = firstName + " " + lastName;
 fullName;
 //  Boolean:
-var a = false;
+let a = false;
 console.log(a);
 console.log(typeof a);
+//  Annotation:
+const ann = "Teste";
+let inf = "Teste";
