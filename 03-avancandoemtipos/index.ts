@@ -73,10 +73,61 @@ function showUserRole(role: boolean | string) {
 console.log(showUserRole(true));
 console.log(showUserRole("Shalom!"));
 
-//  Type Alias:
+//  7 - Type Alias:
 type ID = string | number;
 function showId(id: ID) {
   console.log(`O Id é ${id}`);
 }
 showId(26);
 showId("300");
+
+//  8 - Interface:
+interface Point {
+  x: number;
+  y: number;
+  z: number;
+}
+function showCoords(obj: Point) {
+  console.log(`X: ${obj.x} Y: ${obj.y} Z: ${obj.z}`);
+}
+
+const coordObj: Point = {
+  x: 5,
+  y: 7,
+  z: 9,
+};
+
+console.log(coordObj);
+
+//  9 - Interface X Alias:
+interface Person {
+  name: string;
+}
+
+interface Person {
+  age: number;
+}
+const somePerson: Person = { name: "Danilo", age: 38 };
+console.log(somePerson);
+
+type personType = {
+  name: string;
+};
+// type personType = {     Não é possível modificar!
+//   age: number;
+// };
+
+//  10 - Literal Type:
+
+function showDirection(direction: "left" | "right" | "center") {
+  console.log(`Its ${direction} direction.`);
+}
+console.log(showDirection("right"));
+
+// let teste: "Testando";
+// teste = "Testing";
+// console.log(teste);
+
+//  11 - Non null assertion operator:
+// const parag = document.getElementById("some-p");
+// console.log(parag!.innerText);

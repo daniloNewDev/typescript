@@ -69,3 +69,28 @@ function showId(id) {
 }
 showId(26);
 showId("300");
+function showCoords(obj) {
+    console.log(`X: ${obj.x} Y: ${obj.y} Z: ${obj.z}`);
+}
+const coordObj = {
+    x: 5,
+    y: 7,
+    z: 9,
+};
+console.log(coordObj);
+const somePerson = { name: "Danilo", age: 38 };
+console.log(somePerson);
+// type personType = {     Não é possível modificar!
+//   age: number;
+// };
+//  10 - Literal Type:
+function showDirection(direction) {
+    console.log(`Its ${direction} direction.`);
+}
+console.log(showDirection("right"));
+// let teste: "Testando";
+// teste = "Testing";
+// console.log(teste);
+//  11 - Non null assertion operator:
+// const parag = document.getElementById("some-p");
+// console.log(parag!.innerText);
