@@ -67,3 +67,48 @@ function modernGreeting(name: string, greet?: string) {
 }
 console.log(modernGreeting("Danilo"));
 console.log(modernGreeting("Danilo", "Sr"));
+
+//  Parâmetro Default:
+function somaDefault(n: number, m = 10): number {
+  return n + m;
+}
+console.log(somaDefault(5));
+console.log(somaDefault(5, 13));
+
+//  Unknown:
+function doSomething(x: unknown) {
+  if (Array.isArray(x)) {
+    console.log(x[0]);
+  } else if (typeof x === "number") {
+    console.log("X é um número.");
+  }
+}
+
+console.log(doSomething([1, 2, 3]));
+console.log(doSomething(6));
+
+//  Never:
+function showErrorMessage(msg: string): never {
+  throw new Error(msg);
+}
+//showErrorMessage("Algum erro!")
+
+//  REST operator:
+function sumAll(...n: number[]) {
+  return n.reduce((number, sum) => sum + number);
+}
+console.log(sumAll(1, 2, 3, 4, 5, 13, 26));
+
+//  Destructuring como parâmetro:
+function showProductDetails({
+  name,
+  price,
+}: {
+  name: string;
+  price: number;
+}): string {
+  return `Produto: ${name}, Valor: ${price}.`;
+}
+const shirt = { name: "Camisa", price: 70 };
+
+console.log(showProductDetails(shirt));
